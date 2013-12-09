@@ -1,15 +1,15 @@
 ;***** THIS IS A MACHINE GENERATED FILE - DO NOT EDIT ********************
-;***** Created: 2008-04-10 09:29 ******* Source: ATmega324P.xml **********
+;***** Created: 2011-02-09 12:03 ******* Source: ATmega644P.xml **********
 ;*************************************************************************
 ;* A P P L I C A T I O N   N O T E   F O R   T H E   A V R   F A M I L Y
 ;* 
 ;* Number            : AVR000
-;* File Name         : "m324Pdef.inc"
-;* Title             : Register/Bit Definitions for the ATmega324P
-;* Date              : 2008-04-10
-;* Version           : 2.25
+;* File Name         : "m644Pdef.inc"
+;* Title             : Register/Bit Definitions for the ATmega644P
+;* Date              : 2011-02-09
+;* Version           : 2.35
 ;* Support E-mail    : avr@atmel.com
-;* Target MCU        : ATmega324P
+;* Target MCU        : ATmega644P
 ;* 
 ;* DESCRIPTION
 ;* When including this file in the assembly program file, all I/O register 
@@ -37,18 +37,18 @@
 ;* ...                         ;otherwise do something else
 ;*************************************************************************
 
-#ifndef _M324PDEF_INC_
-#define _M324PDEF_INC_
+#ifndef _M644PDEF_INC_
+#define _M644PDEF_INC_
 
 
 #pragma partinc 0
 
 ; ***** SPECIFY DEVICE ***************************************************
-.device ATmega324P
-#pragma AVRPART ADMIN PART_NAME ATmega324P
+.device ATmega644P
+#pragma AVRPART ADMIN PART_NAME ATmega644P
 .equ	SIGNATURE_000	= 0x1e
-.equ	SIGNATURE_001	= 0x95
-.equ	SIGNATURE_002	= 0x08
+.equ	SIGNATURE_001	= 0x96
+.equ	SIGNATURE_002	= 0x0a
 
 #pragma AVRPART CORE CORE_VERSION V2E
 
@@ -115,16 +115,15 @@
 .equ	SREG	= 0x3f
 .equ	SPL	= 0x3d
 .equ	SPH	= 0x3e
-.equ	RAMPZ	= 0x3b
 .equ	SPMCSR	= 0x37
 .equ	MCUCR	= 0x35
 .equ	MCUSR	= 0x34
 .equ	SMCR	= 0x33
 .equ	OCDR	= 0x31
 .equ	ACSR	= 0x30
-.equ	SPDR0	= 0x2e
-.equ	SPSR0	= 0x2d
-.equ	SPCR0	= 0x2c
+.equ	SPDR	= 0x2e
+.equ	SPSR	= 0x2d
+.equ	SPCR	= 0x2c
 .equ	GPIOR2	= 0x2b
 .equ	GPIOR1	= 0x2a
 .equ	OCR0B	= 0x28
@@ -231,8 +230,8 @@
 .equ	UBRR11	= 3	; USART Baud Rate Register bit 11
 
 ; UBRR0L - USART Baud Rate Register Low Byte
-.equ	UBRR0	= 0	; USART Baud Rate Register bit 0
-.equ	UBRR1	= 1	; USART Baud Rate Register bit 1
+.equ	_UBRR0	= 0	; USART Baud Rate Register bit 0
+.equ	_UBRR1	= 1	; USART Baud Rate Register bit 1
 .equ	UBRR2	= 2	; USART Baud Rate Register bit 2
 .equ	UBRR3	= 3	; USART Baud Rate Register bit 3
 .equ	UBRR4	= 4	; USART Baud Rate Register bit 4
@@ -439,14 +438,14 @@
 .equ	TCNT0_7	= 7	; 
 
 ; OCR0A - Timer/Counter0 Output Compare Register
-.equ	OCROA_0	= 0	; 
-.equ	OCROA_1	= 1	; 
-.equ	OCROA_2	= 2	; 
-.equ	OCROA_3	= 3	; 
-.equ	OCROA_4	= 4	; 
-.equ	OCROA_5	= 5	; 
-.equ	OCROA_6	= 6	; 
-.equ	OCROA_7	= 7	; 
+.equ	OCR0A_0	= 0	; 
+.equ	OCR0A_1	= 1	; 
+.equ	OCR0A_2	= 2	; 
+.equ	OCR0A_3	= 3	; 
+.equ	OCR0A_4	= 4	; 
+.equ	OCR0A_5	= 5	; 
+.equ	OCR0A_6	= 6	; 
+.equ	OCR0A_7	= 7	; 
 
 ; OCR0B - Timer/Counter0 Output Compare Register
 .equ	OCR0B_0	= 0	; 
@@ -503,24 +502,24 @@
 .equ	TCNT2_7	= 7	; Timer/Counter 2 bit 7
 
 ; OCR2A - Timer/Counter2 Output Compare Register A
-.equ	OCR2_0	= 0	; Timer/Counter2 Output Compare Register Bit 0
-.equ	OCR2_1	= 1	; Timer/Counter2 Output Compare Register Bit 1
-.equ	OCR2_2	= 2	; Timer/Counter2 Output Compare Register Bit 2
-.equ	OCR2_3	= 3	; Timer/Counter2 Output Compare Register Bit 3
-.equ	OCR2_4	= 4	; Timer/Counter2 Output Compare Register Bit 4
-.equ	OCR2_5	= 5	; Timer/Counter2 Output Compare Register Bit 5
-.equ	OCR2_6	= 6	; Timer/Counter2 Output Compare Register Bit 6
-.equ	OCR2_7	= 7	; Timer/Counter2 Output Compare Register Bit 7
+.equ	OCR2A_0	= 0	; Timer/Counter2 Output Compare Register Bit 0
+.equ	OCR2A_1	= 1	; Timer/Counter2 Output Compare Register Bit 1
+.equ	OCR2A_2	= 2	; Timer/Counter2 Output Compare Register Bit 2
+.equ	OCR2A_3	= 3	; Timer/Counter2 Output Compare Register Bit 3
+.equ	OCR2A_4	= 4	; Timer/Counter2 Output Compare Register Bit 4
+.equ	OCR2A_5	= 5	; Timer/Counter2 Output Compare Register Bit 5
+.equ	OCR2A_6	= 6	; Timer/Counter2 Output Compare Register Bit 6
+.equ	OCR2A_7	= 7	; Timer/Counter2 Output Compare Register Bit 7
 
 ; OCR2B - Timer/Counter2 Output Compare Register B
-;.equ	OCR2_0	= 0	; Timer/Counter2 Output Compare Register Bit 0
-;.equ	OCR2_1	= 1	; Timer/Counter2 Output Compare Register Bit 1
-;.equ	OCR2_2	= 2	; Timer/Counter2 Output Compare Register Bit 2
-;.equ	OCR2_3	= 3	; Timer/Counter2 Output Compare Register Bit 3
-;.equ	OCR2_4	= 4	; Timer/Counter2 Output Compare Register Bit 4
-;.equ	OCR2_5	= 5	; Timer/Counter2 Output Compare Register Bit 5
-;.equ	OCR2_6	= 6	; Timer/Counter2 Output Compare Register Bit 6
-;.equ	OCR2_7	= 7	; Timer/Counter2 Output Compare Register Bit 7
+.equ	OCR2B_0	= 0	; Timer/Counter2 Output Compare Register Bit 0
+.equ	OCR2B_1	= 1	; Timer/Counter2 Output Compare Register Bit 1
+.equ	OCR2B_2	= 2	; Timer/Counter2 Output Compare Register Bit 2
+.equ	OCR2B_3	= 3	; Timer/Counter2 Output Compare Register Bit 3
+.equ	OCR2B_4	= 4	; Timer/Counter2 Output Compare Register Bit 4
+.equ	OCR2B_5	= 5	; Timer/Counter2 Output Compare Register Bit 5
+.equ	OCR2B_6	= 6	; Timer/Counter2 Output Compare Register Bit 6
+.equ	OCR2B_7	= 7	; Timer/Counter2 Output Compare Register Bit 7
 
 ; ASSR - Asynchronous Status Register
 .equ	TCR2BUB	= 0	; Timer/Counter Control Register2 Update Busy
@@ -747,26 +746,6 @@
 .equ	FOC1B	= 6	; Force Output Compare for Channel B
 .equ	FOC1A	= 7	; Force Output Compare for Channel A
 
-; OCR1BH - Timer/Counter1 Output Compare Register B High Byte
-.equ	OCR1AH0	= 0	; Timer/Counter1 Output Compare Register High Byte bit 0
-.equ	OCR1AH1	= 1	; Timer/Counter1 Output Compare Register High Byte bit 1
-.equ	OCR1AH2	= 2	; Timer/Counter1 Output Compare Register High Byte bit 2
-.equ	OCR1AH3	= 3	; Timer/Counter1 Output Compare Register High Byte bit 3
-.equ	OCR1AH4	= 4	; Timer/Counter1 Output Compare Register High Byte bit 4
-.equ	OCR1AH5	= 5	; Timer/Counter1 Output Compare Register High Byte bit 5
-.equ	OCR1AH6	= 6	; Timer/Counter1 Output Compare Register High Byte bit 6
-.equ	OCR1AH7	= 7	; Timer/Counter1 Output Compare Register High Byte bit 7
-
-; OCR1BL - Timer/Counter1 Output Compare Register B Low Byte
-.equ	OCR1AL0	= 0	; Timer/Counter1 Output Compare Register Low Byte Bit 0
-.equ	OCR1AL1	= 1	; Timer/Counter1 Output Compare Register Low Byte Bit 1
-.equ	OCR1AL2	= 2	; Timer/Counter1 Output Compare Register Low Byte Bit 2
-.equ	OCR1AL3	= 3	; Timer/Counter1 Output Compare Register Low Byte Bit 3
-.equ	OCR1AL4	= 4	; Timer/Counter1 Output Compare Register Low Byte Bit 4
-.equ	OCR1AL5	= 5	; Timer/Counter1 Output Compare Register Low Byte Bit 5
-.equ	OCR1AL6	= 6	; Timer/Counter1 Output Compare Register Low Byte Bit 6
-.equ	OCR1AL7	= 7	; Timer/Counter1 Output Compare Register Low Byte Bit 7
-
 
 ; ***** EEPROM ***********************
 ; EEARH - EEPROM Address Register Low Byte
@@ -802,33 +781,6 @@
 .equ	EERIE	= 3	; EEPROM Ready Interrupt Enable
 .equ	EEPM0	= 4	; EEPROM Programming Mode Bit 0
 .equ	EEPM1	= 5	; EEPROM Programming Mode Bit 1
-
-
-; ***** SPI **************************
-; SPDR0 - SPI Data Register
-.equ	SPDRB0	= 0	; SPI Data Register bit 0
-.equ	SPDRB1	= 1	; SPI Data Register bit 1
-.equ	SPDRB2	= 2	; SPI Data Register bit 2
-.equ	SPDRB3	= 3	; SPI Data Register bit 3
-.equ	SPDRB4	= 4	; SPI Data Register bit 4
-.equ	SPDRB5	= 5	; SPI Data Register bit 5
-.equ	SPDRB6	= 6	; SPI Data Register bit 6
-.equ	SPDRB7	= 7	; SPI Data Register bit 7
-
-; SPSR0 - SPI Status Register
-.equ	SPI2X0	= 0	; Double SPI Speed Bit
-.equ	WCOL0	= 6	; Write Collision Flag
-.equ	SPIF0	= 7	; SPI Interrupt Flag
-
-; SPCR0 - SPI Control Register
-.equ	SPR00	= 0	; SPI Clock Rate Select 0
-.equ	SPR10	= 1	; SPI Clock Rate Select 1
-.equ	CPHA0	= 2	; Clock Phase
-.equ	CPOL0	= 3	; Clock polarity
-.equ	MSTR0	= 4	; Master/Slave Select
-.equ	DORD0	= 5	; Data Order
-.equ	SPE0	= 6	; SPI Enable
-.equ	SPIE0	= 7	; SPI Interrupt Enable
 
 
 ; ***** TWI **************************
@@ -941,20 +893,20 @@
 .equ	UMSEL11	= 7	; USART Mode Select
 
 ; UBRR1H - USART Baud Rate Register High Byte
-;.equ	UBRR8	= 0	; USART Baud Rate Register bit 8
-;.equ	UBRR9	= 1	; USART Baud Rate Register bit 9
-;.equ	UBRR10	= 2	; USART Baud Rate Register bit 10
-;.equ	UBRR11	= 3	; USART Baud Rate Register bit 11
+.equ	UBRR_8	= 0	; USART Baud Rate Register bit 8
+.equ	UBRR_9	= 1	; USART Baud Rate Register bit 9
+.equ	UBRR_10	= 2	; USART Baud Rate Register bit 10
+.equ	UBRR_11	= 3	; USART Baud Rate Register bit 11
 
 ; UBRR1L - USART Baud Rate Register Low Byte
-;.equ	UBRR0	= 0	; USART Baud Rate Register bit 0
-;.equ	UBRR1	= 1	; USART Baud Rate Register bit 1
-;.equ	UBRR2	= 2	; USART Baud Rate Register bit 2
-;.equ	UBRR3	= 3	; USART Baud Rate Register bit 3
-;.equ	UBRR4	= 4	; USART Baud Rate Register bit 4
-;.equ	UBRR5	= 5	; USART Baud Rate Register bit 5
-;.equ	UBRR6	= 6	; USART Baud Rate Register bit 6
-;.equ	UBRR7	= 7	; USART Baud Rate Register bit 7
+.equ	UBRR_0	= 0	; USART Baud Rate Register bit 0
+.equ	UBRR_1	= 1	; USART Baud Rate Register bit 1
+.equ	UBRR_2	= 2	; USART Baud Rate Register bit 2
+.equ	UBRR_3	= 3	; USART Baud Rate Register bit 3
+.equ	UBRR_4	= 4	; USART Baud Rate Register bit 4
+.equ	UBRR_5	= 5	; USART Baud Rate Register bit 5
+.equ	UBRR_6	= 6	; USART Baud Rate Register bit 6
+.equ	UBRR_7	= 7	; USART Baud Rate Register bit 7
 
 
 ; ***** CPU **************************
@@ -1006,9 +958,6 @@
 .equ	SM1	= 2	; Sleep Mode Select bit 1
 .equ	SM2	= 3	; Sleep Mode Select bit 2
 
-; RAMPZ - RAM Page Z Select Register
-.equ	RAMPZ0	= 0	; RAM Page Z Select Register Bit 0
-
 ; GPIOR2 - General Purpose IO Register 2
 .equ	GPIOR20	= 0	; General Purpose IO Register 2 bit 0
 .equ	GPIOR21	= 1	; General Purpose IO Register 2 bit 1
@@ -1048,6 +997,33 @@
 .equ	PRTIM0	= 5	; Power Reduction Timer/Counter0
 .equ	PRTIM2	= 6	; Power Reduction Timer/Counter2
 .equ	PRTWI	= 7	; Power Reduction TWI
+
+
+; ***** SPI **************************
+; SPDR - SPI Data Register
+.equ	SPDR0	= 0	; SPI Data Register bit 0
+.equ	SPDR1	= 1	; SPI Data Register bit 1
+.equ	SPDR2	= 2	; SPI Data Register bit 2
+.equ	SPDR3	= 3	; SPI Data Register bit 3
+.equ	SPDR4	= 4	; SPI Data Register bit 4
+.equ	SPDR5	= 5	; SPI Data Register bit 5
+.equ	SPDR6	= 6	; SPI Data Register bit 6
+.equ	SPDR7	= 7	; SPI Data Register bit 7
+
+; SPSR - SPI Status Register
+.equ	SPI2X	= 0	; Double SPI Speed Bit
+.equ	WCOL	= 6	; Write Collision Flag
+.equ	SPIF	= 7	; SPI Interrupt Flag
+
+; SPCR - SPI Control Register
+.equ	SPR0	= 0	; SPI Clock Rate Select 0
+.equ	SPR1	= 1	; SPI Clock Rate Select 1
+.equ	CPHA	= 2	; Clock Phase
+.equ	CPOL	= 3	; Clock polarity
+.equ	MSTR	= 4	; Master/Slave Select
+.equ	DORD	= 5	; Data Order
+.equ	SPE	= 6	; SPI Enable
+.equ	SPIE	= 7	; SPI Interrupt Enable
 
 
 
@@ -1099,32 +1075,32 @@
 
 
 ; ***** DATA MEMORY DECLARATIONS *****************************************
-.equ	FLASHEND	= 0x3fff	; Note: Word address
+.equ	FLASHEND	= 0x7fff	; Note: Word address
 .equ	IOEND	= 0x00ff
 .equ	SRAM_START	= 0x0100
-.equ	SRAM_SIZE	= 2048
-.equ	RAMEND	= 0x08ff
+.equ	SRAM_SIZE	= 4096
+.equ	RAMEND	= 0x10ff
 .equ	XRAMEND	= 0x0000
-.equ	E2END	= 0x03ff
-.equ	EEPROMEND	= 0x03ff
-.equ	EEADRBITS	= 10
-#pragma AVRPART MEMORY PROG_FLASH 32768
-#pragma AVRPART MEMORY EEPROM 1024
-#pragma AVRPART MEMORY INT_SRAM SIZE 2048
+.equ	E2END	= 0x07ff
+.equ	EEPROMEND	= 0x07ff
+.equ	EEADRBITS	= 11
+#pragma AVRPART MEMORY PROG_FLASH 65536
+#pragma AVRPART MEMORY EEPROM 2048
+#pragma AVRPART MEMORY INT_SRAM SIZE 4096
 #pragma AVRPART MEMORY INT_SRAM START_ADDR 0x100
 
 
 
 ; ***** BOOTLOADER DECLARATIONS ******************************************
-.equ	NRWW_START_ADDR	= 0x3800
-.equ	NRWW_STOP_ADDR	= 0x3fff
+.equ	NRWW_START_ADDR	= 0x7000
+.equ	NRWW_STOP_ADDR	= 0x7fff
 .equ	RWW_START_ADDR	= 0x0
-.equ	RWW_STOP_ADDR	= 0x37ff
-.equ	PAGESIZE	= 64
-.equ	FIRSTBOOTSTART	= 0x3f00
-.equ	SECONDBOOTSTART	= 0x3e00
-.equ	THIRDBOOTSTART	= 0x3c00
-.equ	FOURTHBOOTSTART	= 0x3800
+.equ	RWW_STOP_ADDR	= 0x6fff
+.equ	PAGESIZE	= 128
+.equ	FIRSTBOOTSTART	= 0x7e00
+.equ	SECONDBOOTSTART	= 0x7c00
+.equ	THIRDBOOTSTART	= 0x7800
+.equ	FOURTHBOOTSTART	= 0x7000
 .equ	SMALLBOOTSTART	= FIRSTBOOTSTART
 .equ	LARGEBOOTSTART	= FOURTHBOOTSTART
 
@@ -1164,6 +1140,6 @@
 
 .equ	INT_VECTORS_SIZE	= 62	; size in words
 
-#endif  /* _M324PDEF_INC_ */
+#endif  /* _M644PDEF_INC_ */
 
 ; ***** END OF FILE ******************************************************

@@ -5,7 +5,7 @@
 
 
 
-.include "m324Pdef.inc"
+.include "m644Pdef.inc"
 .include "macros.inc"
 .include "miscmacros.inc"
 .include "variables.asm"

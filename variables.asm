@@ -29,6 +29,7 @@
 ;---  16.8 bit signed registers ---
 
 FixedPointVariableEnumerate168 Temp
+FixedPointVariableEnumerate168 Temp2
 FixedPointVariableEnumerate168 RxChannel
 FixedPointVariableEnumerate168 RxRoll
 FixedPointVariableEnumerate168 RxPitch
@@ -196,6 +197,11 @@ FixedPointVariableEnumerate824 Debug
 
 
 ;--- RAM variables (8bit)----
+
+RamVariableEnumerate8 TWI_targetSlaveAddress
+RamVariableEnumerate8 TWI_address
+RamVariableEnumerate8 Temp3
+RamVariableEnumerate8 TWI_data
 
 RamVariableEnumerate8 Xpos		;pixel pos
 RamVariableEnumerate8 Ypos

@@ -13,6 +13,10 @@ ShowVersion:
 	lrv Y1, 19
 	mPrintString sho2
 
+	lrv X1, 0
+	lrv Y1, 29
+	mPrintString sho3
+
 	call LcdUpdate
 
 	ldx 1000
@@ -23,5 +27,6 @@ ShowVersion:
 	
 
 
-sho1:	.db "Version 1.6",0
-sho2:	.db "By Rolf Runar Bakke",0
+sho1:   .db "HW Ver 2.1 ",0
+sho2:	.db "FW Ver 1.6 ",0
+sho3:	.db " hexTronik ",0
